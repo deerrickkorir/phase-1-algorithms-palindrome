@@ -23,3 +23,24 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+function isPalindrome(str) {
+  let start = 0;
+  let end = str.length - 1;
+  
+  while (start < end) {
+      if (str[start] !== str[end]) {
+          return false;
+      }
+      start++;
+      end--;
+  }
+  return true;
+}
+
+// Test cases
+console.log(isPalindrome("madam")); // Output: true
+console.log(isPalindrome("robot")); // Output: false
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("level")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
+
